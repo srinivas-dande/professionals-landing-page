@@ -65,19 +65,52 @@ export default function StudentOutcomesSection() {
           {/* Left Column */}
           <div>
             <span className="text-[#4F46E5] text-sm font-semibold mb-4 block">
-              Career Transitions
+              Student Outcomes
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-2">
-              People who had the same fear you have right now
+              No prior work experience. No IIT.
             </h2>
             <h2 className="text-3xl md:text-4xl font-bold text-[#DC2626] mb-6">
-              
+              Real Career Outcomes.
             </h2>
             <p className="text-[#6B7280] text-base leading-relaxed mb-12">
-              Every student here had exactly the same starting point you have right now a degree in progress and no AI/ML background. Here&apos;s where they aretoday.
+              Every student featured here started with the same challenge — no industry experience, no AI/ML background, and no special advantage.
             </p>
 
-            
+            {/* Stats Cards */}
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="bg-white rounded-xl p-4 text-center">
+                <div className="text-[#7C3AED] text-2xl md:text-3xl font-bold mb-2">
+                 Production Ready
+                </div>
+                <p className="text-[#6B7280] text-sm leading-relaxed">
+                   Projects.Built and deployed during the program.
+
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-4 text-center">
+                <div className="text-[#7C3AED] text-2xl md:text-3xl font-bold mb-2">
+                  GitHub Portfolio
+                </div>
+                <p className="text-[#6B7280] text-sm leading-relaxed">
+                  Showcase real AI/ML projects recruiters can review.
+                </p>
+              </div>
+
+              {/* Third card */}
+              <div className="col-span-2 lg:col-span-1 flex justify-center">
+                <div className="bg-white rounded-xl p-4 text-center max-w-[280px]">
+                  <div className="text-[#7C3AED] text-2xl md:text-3xl font-bold mb-2">
+                    Interview Ready
+
+                  </div>
+                  <p className="text-[#6B7280] text-sm leading-relaxed">
+                    Project discussions, technical rounds, and career guidance.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right Column - Testimonial Card */}
@@ -111,7 +144,7 @@ export default function StudentOutcomesSection() {
             </div>
 
             {/* Navigation Arrows */}
-            <div className="flex gap-3 mt-6 justify-center md:justify-start">
+            <div className="flex gap-3 mt-6 justify-center lg:justify-start">
               <button
                 onClick={handlePrev}
                 className="w-12 h-12 rounded-full border-2 border-[#CF2030] flex items-center justify-center text-[#CF2030] hover:bg-[#CF2030] hover:text-white transition-colors"
