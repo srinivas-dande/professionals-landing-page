@@ -1,8 +1,139 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from "react";
 
 export default function FinalCTASection() {
+
+  const [formData, setFormData] = useState({
+    full_name: "",
+    email_id: "",
+    whatsapp_number: "",
+    year_of_experience: "",
+    current_role: "",
+
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+    utm_term: "",
+    utm_content: "",
+    gclid: "",
+
+    landing_page: "",
+    page_url: "",
+    form_type: "Professionals Landing Page",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+
+    setFormData((prev) => ({
+      ...prev,
+      utm_source: params.get("utm_source") || "",
+      utm_medium: params.get("utm_medium") || "",
+      utm_campaign: params.get("utm_campaign") || "",
+      utm_term: params.get("utm_term") || "",
+      utm_content: params.get("utm_content") || "",
+      gclid: params.get("gclid") || "",
+
+      page_url: window.location.href,
+      landing_page: window.location.pathname,
+      form_type: "Professionals Landing Page",
+    }));
+  }, []);
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.full_name.trim()) {
+      newErrors.full_name = "Full name is required";
+    }
+
+    if (!formData.email_id.trim()) {
+      newErrors.email_id = "Email is required";
+    } else if (
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email_id)
+    ) {
+      newErrors.email_id = "Enter a valid email";
+    }
+
+    if (!formData.whatsapp_number.trim()) {
+      newErrors.whatsapp_number = "WhatsApp number is required";
+    } else if (!/^\d{10}$/.test(formData.whatsapp_number)) {
+      newErrors.whatsapp_number = "Enter a valid 10 digit number";
+    }
+
+    if (!formData.year_of_experience) {
+      newErrors.year_of_experience = "Please select your experience";
+    }
+
+    if (!formData.current_role) {
+      newErrors.current_role = "Please select role";
+    }
+
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setSuccessMessage("");
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const response = await fetch("/api/professional-lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setFormData((prev) => ({
+          ...prev,
+
+          full_name: "",
+          email_id: "",
+          whatsapp_number: "",
+          year_of_experience: "",
+          current_role: "",
+          
+        }));
+
+        setErrors({});
+        setSuccessMessage(
+          "Thank you!"
+        );
+
+        setTimeout(() => {
+          setSuccessMessage("");
+        }, 5000);
+      }
+
+      setLoading(false);
+
+      console.log(result);
+
+    } catch (error) {
+      console.error(error);
+      setLoading(false);
+    }
+  };
+
   const checkItems = [
     '₹42 LPA average new package, ₹18 LPA average salary increase',
     'Fits around your full-time job, live sessions weekends only',
@@ -60,99 +191,185 @@ export default function FinalCTASection() {
             </div>
 
             {/* Form */}
-            <form className="space-y-3">
-              {/* Full Name */}
+            <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Full Name */}
+            <div>
+              <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
+                Full Name
+              </label>
+              <input
+                type="text"
+                value={formData.full_name}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    full_name: e.target.value,
+                  })
+                }
+                placeholder="Aditya Rao"
+                className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] placeholder-[#98A2B3] text-sm focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent"
+              />
+              {errors.full_name && (
+                <p className="text-red-500 text-xs mt-1">
+                  {errors.full_name}
+                </p>
+              )}
+            </div>
+
+            {/* WhatsApp and Email Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
-                  Full Name
+                  Email ID
                 </label>
                 <input
-                  type="text"
-                  placeholder="Aditya Rao"
-                  className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent placeholder:text-[#98A2B3]"
+                  type="email"
+                  value={formData.email_id}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      email_id: e.target.value,
+                    })
+                  }
+                  placeholder="you@college.edu"
+                  className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] placeholder-[#98A2B3] text-sm focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent"
                 />
+                {errors.email_id && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.email_id}
+                  </p>
+                )}
               </div>
+              <div>
+                <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
+                  WhatsApp Number
+                </label>
+                <input
+                  type="tel"
+                  value={formData.whatsapp_number}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      whatsapp_number: e.target.value,
+                    })
+                  }
+                  placeholder="+91 98765 43210"
+                  className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] placeholder-[#98A2B3] text-sm focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent"
+                />
+                {errors.whatsapp_number && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.whatsapp_number}
+                  </p>
+                )}
+              </div>
+            </div>
 
-              {/* WhatsApp and Email Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
-                    WhatsApp Number
-                  </label>
-                  <input
-                    type="tel"
-                    placeholder="+91 98765 43210"
-                    className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent placeholder:text-[#98A2B3]"
+            {/* Year and Branch Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
+                  Years of Experience
+                </label>
+                <div className="relative">
+                  <select 
+                    value={formData.year_of_experience}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        year_of_experience: e.target.value,
+                      })
+                    }
+                    className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10"
+                  >
+                    <option value="">Select Experience</option>
+                    <option value="0-2 Years">0-2 Years</option>
+                    <option value="3-5 Years">3-5 Years</option>
+                    <option value="6-10 Years">6-10 Years</option>
+                    <option value="10-15 Years">10-15 Years</option>
+                    <option value="15+ Years">15+ Years</option>
+                  </select>
+                  {errors.year_of_experience && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.year_of_experience}
+                    </p>
+                  )}
+                  <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#98A2B3] pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
+                  Current Role
+                </label>
+                <div className="relative">
+                  <select
+                    value={formData.current_role}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        current_role: e.target.value,
+                      })
+                    }
+                    className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10"
+                  > 
+                    <option value="">Select Role</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="Senior Software Engineer">Senior Software Engineer</option>
+                    <option value="Tech Lead">Tech Lead</option>
+                    <option value="Engineering Manager">Engineering Manager</option>
+                    <option value="Project Manager">Project Manager</option>
+                    <option value="Business Analyst">Business Analyst</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  {errors.current_role && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.current_role}
+                    </p>
+                  )}
+                  <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#98A2B3] pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {successMessage && (
+              <div className="bg-green-50 border border-green-200 text-green-700 rounded-lg p-3 text-sm">
+                {successMessage}
+              </div>
+            )}
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-[#CF2030] hover:bg-[#b01c2a] text-white font-semibold py-3 px-6 rounded-sm flex items-center justify-center gap-2 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {loading ? "Submitting..." : "Reserve My Seat in the June Batch"}
+
+              {!loading && (
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
-                </div>
-                <div>
-                  <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
-                    Email ID
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="you@college.edu"
-                    className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent placeholder:text-[#98A2B3]"
-                  />
-                </div>
-              </div>
-
-              {/* Year and Branch Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
-                    Years of Experience
-                  </label>
-                  <div className="relative">
-                    <select className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10">
-                      <option value="">Select year</option>
-                      <option value="1">1st Year</option>
-                      <option value="2">2nd Year</option>
-                      <option value="3">3rd Year</option>
-                      <option value="4">4th Year</option>
-                    </select>
-                    <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#98A2B3] pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
-                    Current Role
-                  </label>
-                  <div className="relative">
-                    <select className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10">
-                      <option value="">Select branch</option>
-                      <option value="cse">Computer Science</option>
-                      <option value="it">Information Technology</option>
-                      <option value="ece">Electronics</option>
-                      <option value="mech">Mechanical</option>
-                      <option value="commerce">Commerce</option>
-                      <option value="other">Other</option>
-                    </select>
-                    <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#98A2B3] pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full bg-[#CF2030] hover:bg-[#B91C2C] text-white font-semibold py-4 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors"
-              >
-                Reserve My Seat in June 25th Batch
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </button>
-
-              {/* Disclaimer */}
-              <p className="text-[#98A2B3] text-xs text-center">
-                No spam. Your details stay private. A counsellor reaches out within 1 hour.
-              </p>
-            </form>
+              )}
+            </button>
+            
+            {/* Privacy Note */}
+            <p className="text-center text-[#98A2B3] text-xs">
+              *Your details are safe. No spam. A counsellor will reach out within 1 hour.
+            </p>
+          </form>
           </div>
         </div>
       </div>

@@ -7,63 +7,63 @@ export default function CurriculumSection() {
 
   const modules = [
     {
-      weeks: 'WEEKS 1–3',
-      title: 'Python & ML Foundations',
+      weeks: 'PHASE 1',
+      title: 'Programming & Data Foundations',
       items: [
-        'Python for data science, NumPy, Pandas, Matplotlib from scratch',
-        'Statistics and probability: distributions, hypothesis testing, correlation',
-        'Supervised learning: regression, decision trees, model evaluation',
-        'Scikit-learn complete walkthrough with real datasets from Day 1'
+        'SQL, Advanced SQL, Database Design & Data Modeling',
+        'Python Programming, OOP & Data Structures',
+        'NumPy, Pandas & Data Manipulation',
+        'Data Processing, Analysis & Problem Solving'
       ]
     },
     {
-      weeks: 'WEEKS 4–6',
-      title: 'Data Engineering & EDA',
+      weeks: 'PHASE 2',
+      title: 'Mathematics & Data Analysis',
       items: [
-        'SQL for machine learning, joins, aggregations, window functions',
-        'Advanced feature engineering and automated selection',
-        'Handling missing data, outliers, and class imbalance',
-        'Project delivery: Customer Churn Predictor (end-to-end)'
+        'Statistics, Probability & Linear Algebra Foundations',
+        'Exploratory Data Analysis (EDA) & Visualization',
+        'Data Cleaning, Transformation & Feature Analysis',
+        'Business Insights, Trends & Data Storytelling'
       ]
     },
     {
-      weeks: 'WEEKS 7–10',
-      title: 'Deep Learning & Neural Networks',
+      weeks: 'PHASE 3',
+      title: 'Machine Learning Engineering',
       items: [
-        'Neural network architecture, perceptron to deep multi-layer networks',
-        'TensorFlow and PyTorch, training loops, optimisers, loss functions',
-        'CNNs for vision, RNNs and LSTMs for sequential data',
-        'Transfer learning with pre-trained models on new domains'
+        'Supervised & Unsupervised Learning Algorithms',
+        'Feature Engineering & Model Optimization',
+        'Ensemble Methods & Recommendation Systems',
+        'Real-World Machine Learning Problem Solving'
       ]
     },
     {
-      weeks: 'WEEKS 11–14',
-      title: 'NLP & Large Language Models',
+      weeks: 'PHASE 4',
+      title: 'Deep Learning & Computer Vision',
       items: [
-        'Text preprocessing, tokenisation, word embeddings',
-        'Transformer architecture, attention, BERT, GPT fine-tuning',
-        'Building RAG pipelines with LangChain for production LLM apps',
-        'Project: NLP Sentiment Classifier deployed as authenticated API'
+        'Neural Networks, Deep Learning Fundamentals',
+        'TensorFlow, Keras & PyTorch Frameworks',
+        'CNNs, Transfer Learning & Model Optimization',
+        'Image Classification, Object Detection & Computer Vision'
       ]
     },
     {
-      weeks: 'WEEKS 15–18',
-      title: 'MLOps & Cloud Deployment',
+      weeks: 'PHASE 5',
+      title: 'NLP, Generative AI & Agentic AI',
       items: [
-        'Model serving with Flask, FastAPI, Streamlit, production patterns',
-        'Docker for portable, reproducible ML applications',
-        'AWS SageMaker and Google Cloud Vertex AI deployment',
-        'CI/CD pipelines for automated ML deployment via GitHub Actions'
+        'NLP, Transformers, BERT & Prompt Engineering',
+        'LLMs, RAG Pipelines & Fine-Tuning Techniques',
+        'MCP, Tool Calling & Agent Workflows',
+        'Agentic AI, Multi-Agent Systems & Automation'
       ]
     },
     {
-      weeks: 'WEEKS 19–24',
-      title: 'Capstone + Interview Prep',
+      weeks: 'PHASE 6',
+      title: 'MLOps & Industry Capstone',
       items: [
-        '1:1 mentored domain capstone, full build with code review',
-        'ML system design interview preparation and walkthroughs',
-        '5 structured mock interviews with detailed written feedback',
-        'Resume, LinkedIn, and GitHub portfolio review sessions'
+        'Model Deployment with Flask, FastAPI & Streamlit',
+        'Docker, MLflow & Production AI Workflows',
+        'AWS, Cloud Deployment & CI/CD Pipelines',
+        'End-to-End AI Project Development & Monitoring'
       ]
     }
   ];

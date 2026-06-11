@@ -17,7 +17,7 @@ import Footer from '@/components/working-professionals/Footer';
  
 export default function Page() {
   return (
-    <main className="min-h-screen bg-[#F5F7FA]">
+    <main className="min-h-screen bg-[#F5F7FA] pt-[140px]">
       <HeaderWithBanner />
       <HeroSection />
       <PortfolioSection />
