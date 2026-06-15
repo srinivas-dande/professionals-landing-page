@@ -4,6 +4,13 @@ import { useState, useEffect } from "react";
 
 export default function HeroSection() {
 
+  const checkItems = [
+    '25,000+ Students Trained since 2005',
+    '20+ Years Training Experience',
+    'Mock Interviews and Industry Projects',
+    'Career Guidance & Placement Assistance',
+  ];
+
   const [formData, setFormData] = useState({
     full_name: "",
     email_id: "",
@@ -160,35 +167,30 @@ export default function HeroSection() {
             This isn't another AI course. It's an artificial intelligence course for working professionals which helps you build on your existing experience, develop in-demand AI skills, and transition into high-growth AI/ML roles with significantly higher earning potential.
           </p>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-3 md:flex md:flex-wrap">
-            <div className="bg-white border border-[#E5E7EB] rounded-2xl px-3 py-3 flex flex-col items-center justify-center text-center min-h-[88px] gap-1 md:flex-row md:rounded-full md:px-5 md:py-3 md:min-h-0 md:text-left md:gap-2">
-              <span className="text-[#4F46E5] font-bold text-sm md:text-base">650+</span>
-              <span className="text-[#1a1a1a] font-bold">Students Placed</span>
-            </div>
-            <div className="bg-white border border-[#E5E7EB] rounded-2xl px-3 py-3 flex flex-col items-center justify-center text-center min-h-[88px] gap-1 md:flex-row md:rounded-full md:px-5 md:py-3 md:min-h-0 md:text-left md:gap-2">
-              <span className="text-[#4F46E5] font-bold text-sm md:text-base">₹18L</span>
-              <span className="text-[#1a1a1a] font-bold">Avg Salary Jump</span>
-            </div>
-            
-            <div className="bg-white border border-[#E5E7EB] rounded-2xl px-3 py-3 flex flex-col items-center justify-center text-center min-h-[88px] gap-1 md:flex-row md:rounded-full md:px-5 md:py-3 md:min-h-0 md:text-left md:gap-2">
-              <span className="text-[#4F46E5] font-bold text-sm md:text-base">87%</span>
-              <span className="text-[#1a1a1a] font-bold">Placed in 3 Months</span>
-            </div>
-            <div className="bg-white border border-[#E5E7EB] rounded-2xl px-3 py-3 flex flex-col items-center justify-center text-center min-h-[88px] gap-1 md:flex-row md:rounded-full md:px-5 md:py-3 md:min-h-0 md:text-left md:gap-2">
-              <span className="text-[#4F46E5] font-bold text-sm md:text-base">4.9★</span>
-              <span className="text-[#1a1a1a] font-bold">Student Rating</span>
-            </div>
+          {/* Checklist */}
+          <div className="space-y-0">
+            {checkItems.map((item, index) => (
+              <div 
+                key={index}
+                className="flex items-start gap-3 py-2 border-b border-[#E5E7EB] w-[85%]"
+              >
+                <svg className="w-5 h-5 text-[#4F46E5] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span className=" text-base text-[#1a1a1a]">{item}</span>
+              </div>
+            ))}
           </div>
+          
         </div>
-
+ 
         {/* Right Form */}
-        <div className="w-full lg:w-[420px] bg-white rounded-2xl shadow-lg p-5 md:p-6">
+        <div className="w-full lg:w-[420px] lg:ml-8 bg-white rounded-2xl shadow-lg p-5 md:p-6">
           <h2 className="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-2">
-            Get Your Free Seat, June Cohort
+            Get AI & Machine Learning Program Details
           </h2>
           <p className="text-[#475467] text-sm mb-6">
-            Fill in your details and we&apos;ll reach out within 1 hour with the full course guide, fees, and payment options.
+            Fill in your details and our team will contact you shortly to discuss the program, career opportunities, fee structure, and admission process.
           </p>
 
           {/* Alert Box */}
