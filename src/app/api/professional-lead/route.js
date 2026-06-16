@@ -28,6 +28,44 @@ export async function POST(request) {
       },
     });
 
+    // ✅ Pabbly Webhook
+    try {
+      const webhookRes = await fetch("https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY0MDYzMTA0MzA1MjZkNTUzZCI_3D_pc/IjU3NjcwNTZlMDYzMDA0MzA1MjZjNTUzNjUxMzQi_pc", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          full_name: body.full_name,
+          email: body.email_id,
+          phone: body.whatsapp_number,
+          year_of_experience: body.year_of_experience,
+          current_role: body.current_role,
+
+          utm_source: body.utm_source,
+          utm_medium: body.utm_medium,
+          utm_campaign: body.utm_campaign,
+          utm_term: body.utm_term,
+          utm_content: body.utm_content,
+          gclid: body.gclid,
+
+          landing_page: body.landing_page,
+          page_url: body.page_url,
+
+          form_type: body.form_type || "Professionals-Landing-Page",
+          lead_stage: "New Lead"
+        }),
+      });
+
+      const text = await webhookRes.text();
+      console.log("Webhook status:", webhookRes.status);
+      console.log("Webhook response:", text);
+    } catch (err) {
+      console.error("Webhook error (Professionals Google Lead):", err);
+    }
+
+    
+
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {

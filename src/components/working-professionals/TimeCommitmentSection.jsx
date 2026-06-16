@@ -148,7 +148,7 @@ export default function TimeCommitmentSection() {
             </div>
 
             <p className="mt-8 text-sm text-[#6B7280] leading-relaxed">
-              <span className="font-bold text-[#111827]">Total Commitment: ~16 Hours Per Week.</span><br/>This schedule is specifically designed for college students and working professionals, allowing you to build AI/ML skills without disrupting your academics or work commitments.
+              <span className="font-bold text-[#111827]">Total Commitment: ~16 Hours Per Week.</span><br/>This schedule is specifically designed for working professionals, allowing you to build AI/ML skills without disrupting your work commitments.
             </p>
           </div>
         </div>
@@ -156,3 +156,4 @@ export default function TimeCommitmentSection() {
     </section>
   );
 }
+
