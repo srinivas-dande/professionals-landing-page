@@ -1,48 +1,61 @@
 'use client';
 
 import { useState } from 'react';
+import Image from "next/image";
 
 const testimonials = [
   {
-    initials: 'AR',
-    name: 'Aditya Rao',
-    details: 'Final Year · CSE · Tier-2 college, Pune',
-    subDetails: 'No prior work experience · Joined in 3rd year',
-    quote: '"I graduated with a 7.2 CGPA from a mid-tier college. I knew I wasn\'t going to win on pedigree. The Dandes AI/ML course gave me 4 real projects on my GitHub, that\'s what the Mu Sigma interviewer spent 20 minutes asking about. Not my grades. My projects."',
-    role: 'ML Engineer',
-    company: 'Mu Sigma, Bangalore · Batch 2024',
-    salary: '₹17 LPA'
+    image: "/testimonials/student1.jpg",
+    initials: '',
+    name: '',
+    details: '',
+    subDetails: '',
+    quote: '""',
+    role: '',
+    company: '',
+    salary: ''
   },
   {
-    initials: 'PK',
-    name: 'Priya Krishnan',
-    details: 'Pre-final Year · ECE · Chennai',
-    subDetails: 'Started during 3rd year · Commerce background in school',
-    quote: '"I started these artificial intelligence classes online in my 3rd year. By the time placements opened, I had an ML portfolio nobody else in my batch had. Two companies reached out before I had even applied. I didn\'t expect that to happen."',
-    role: 'AI Engineer',
-    company: 'Fractal Analytics · Batch 2024',
-    salary: '₹19.5 LPA'
+    initials: '',
+    name: '',
+    details: '',
+    subDetails: '',
+    quote: '""',
+    role: '',
+    company: '',
+    salary: ''
   },
   {
-    initials: 'RS',
-    name: 'Priya Krishnan',
-    details: 'Final Year · Mechanical Engineering · Nagpur',
-    subDetails: 'Non-CS background · Joined as a complete beginner',
-    quote: '"Everyone told me AI/ML was only for CS students. These are genuinely AI courses for beginners, it started from foundations. I landed a role most CS students in my batch couldn\'t get an interview for. My Mechanical background was actually an advantage."',
-    role: 'Data Scientist',
-    company: 'Lam Research · Batch 2023',
-    salary: '₹16 LPA'
+    initials: '',
+    name: '',
+    details: '',
+    subDetails: '',
+    quote: '""',
+    role: '',
+    company: '',
+    salary: ''
   },
   {
-    initials: 'SM',
-    name: 'Sneha Mehta',
-    details: '2nd Year → Completed in 3rd Year · IT Engineering · Hyderabad',
-    subDetails: 'Commerce student in 11th–12th',
-    quote: '"I did this AI course online for students while managing exams and a semester project, fully manageable with a college schedule. The mock interviews were what made the real difference. I walked into placements knowing exactly what was coming."',
-    role: 'ML Associate',
-    company: 'Sigmoid Analytics · Batch 2024',
-    salary: '₹15 LPA'
+    initials: '',
+    name: '',
+    details: '',
+    subDetails: '',
+    quote: '""',
+    role: '',
+    company: '',
+    salary: ''
+  },
+  {
+    initials: '',
+    name: '',
+    details: '',
+    subDetails: '',
+    quote: '""',
+    role: '',
+    company: '',
+    salary: ''
   }
+  
 ];
 
 export default function StudentOutcomesSection() {
@@ -118,9 +131,13 @@ export default function StudentOutcomesSection() {
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               {/* Profile */}
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 bg-[#E6EAFC] rounded-full flex items-center justify-center text-[#4F46E5] font-bold text-sm">
-                  {current.initials}
-                </div>
+                <Image
+                  src={current.image}
+                  alt={current.name}
+                  width={66}
+                  height={66}
+                  className="rounded-full object-cover border border-gray-200"
+                />
                 <div>
                   <h3 className="text-[#1a1a1a] font-bold text-lg">{current.name}</h3>
                   <p className="text-[#6B7280] text-sm">{current.details}</p>
