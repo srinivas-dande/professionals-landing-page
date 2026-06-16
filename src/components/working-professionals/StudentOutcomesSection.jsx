@@ -6,11 +6,11 @@ import Image from "next/image";
 const testimonials = [
   {
     image: "/testimonials/student1.jpg",
-    initials: '',
-    name: '',
-    details: '',
-    subDetails: '',
-    quote: '""',
+    
+    name: 'Rupesh Kumar Singh',
+    details: 'Solution Architect, Worldline Global Services ',
+    subDetails: '20+ Years Experience',
+    quote: '"Dande Sir’s guidance gave me a clear path, strong confidence, and the motivation to move into AI/ML roles."',
     role: '',
     company: '',
     salary: ''
