@@ -204,14 +204,7 @@ export default function HeroSection() {
           </p>
 
           {/* Alert Box */}
-          <div className="bg-[#F5F1E6] border border-[#E9D2A8] rounded-md px-3 py-1 mb-6 flex items-center gap-3">
-            <span className="w-2.5 h-2.5 bg-[#F28C28] rounded-full"></span>
-            <span className="text-[#F28C28] text-[13px] font-semibold">
-              This program is designed for working professionals.
-              We review every application to understand your background, career goals, and suitability before recommending the next steps.
-            </span>
-          </div>
-
+          
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* Full Name */}
@@ -394,7 +387,7 @@ export default function HeroSection() {
 
             {/* Privacy Note */}
             <p className="text-center text-[#98A2B3] text-xs">
-              *Your details are safe. No spam. A counsellor will reach out within 1 hour.
+              *Your details are safe with us. No spam. Our team will contact you shortly.
             </p>
           </form>
         </div>

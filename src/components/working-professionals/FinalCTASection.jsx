@@ -185,13 +185,7 @@ export default function FinalCTASection() {
             </p>
 
             {/* Alert */}
-            <div className="bg-[#FEF3C7] rounded-lg px-4 py-3 mb-6 flex items-center gap-2">
-              <span className="w-2 h-2 bg-[#F59E0B] rounded-full"></span>
-              <span className="text-[#D97706] text-sm font-medium">
-                This program is designed for working professionals.
-                We review every application to understand your background, career goals, and suitability before recommending the next steps.
-              </span>
-            </div>
+            
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -375,7 +369,7 @@ export default function FinalCTASection() {
             
             {/* Privacy Note */}
             <p className="text-center text-[#98A2B3] text-xs">
-              *Your details are safe. No spam. A counsellor will reach out within 1 hour.
+              *Your details are safe with us. No spam. Our team will contact you shortly.
             </p>
           </form>
           </div>
