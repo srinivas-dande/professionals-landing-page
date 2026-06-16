@@ -188,7 +188,7 @@ export default function FinalCTASection() {
             <div className="bg-[#FEF3C7] rounded-lg px-4 py-3 mb-6 flex items-center gap-2">
               <span className="w-2 h-2 bg-[#F59E0B] rounded-full"></span>
               <span className="text-[#D97706] text-sm font-medium">
-                This program is designed for experienced working professionals.
+                This program is designed for working professionals.
                 We review every application to understand your background, career goals, and suitability before recommending the next steps.
               </span>
             </div>
@@ -209,7 +209,7 @@ export default function FinalCTASection() {
                     full_name: e.target.value,
                   })
                 }
-                placeholder="Aditya Rao"
+                placeholder="Srinivas Dande"
                 className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] placeholder-[#98A2B3] text-sm focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent"
               />
               {errors.full_name && (
@@ -234,7 +234,7 @@ export default function FinalCTASection() {
                       email_id: e.target.value,
                     })
                   }
-                  placeholder="you@college.edu"
+                  placeholder="you@gmail.com"
                   className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] placeholder-[#98A2B3] text-sm focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent"
                 />
                 {errors.email_id && (

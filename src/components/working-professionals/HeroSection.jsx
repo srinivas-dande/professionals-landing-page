@@ -157,7 +157,7 @@ export default function HeroSection() {
           </div>
 
           {/* Heading */}
-          <h1 className="max-w-[900px] text-[30px] md:text-[58px] lg:text-[62px] font-medium leading-[1.05] tracking-[-0.02em] mb-5">
+          <h1 className="max-w-[900px] text-[20px] md:text-[48px] lg:text-[58px] font-medium leading-[1.05] tracking-[-0.02em] mb-5">
             <span className="text-[#CF2030] font-semibold">Upskill</span>
             <span className="text-[#0B132B]">
               {" "}with AI & Machine Learning While You Work.
@@ -207,8 +207,8 @@ export default function HeroSection() {
           <div className="bg-[#F5F1E6] border border-[#E9D2A8] rounded-md px-3 py-1 mb-6 flex items-center gap-3">
             <span className="w-2.5 h-2.5 bg-[#F28C28] rounded-full"></span>
             <span className="text-[#F28C28] text-[13px] font-semibold">
-              This program is designed for experienced working professionals.
-We review every application to understand your background, career goals, and suitability before recommending the next steps.
+              This program is designed for working professionals.
+              We review every application to understand your background, career goals, and suitability before recommending the next steps.
             </span>
           </div>
 
@@ -228,7 +228,7 @@ We review every application to understand your background, career goals, and sui
                     full_name: e.target.value,
                   })
                 }
-                placeholder="Aditya Rao"
+                placeholder="Srinivas Dande"
                 className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] placeholder-[#98A2B3] text-sm focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent"
               />
               {errors.full_name && (
@@ -253,7 +253,7 @@ We review every application to understand your background, career goals, and sui
                       email_id: e.target.value,
                     })
                   }
-                  placeholder="you@college.edu"
+                  placeholder="you@gmail.com"
                   className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#1a1a1a] placeholder-[#98A2B3] text-sm focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent"
                 />
                 {errors.email_id && (

@@ -5,55 +5,101 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    image: "/testimonials/student1.jpg",
+    image: "/testimonials/Rajkeshwar Prasad.jpg",
     
-    name: 'Rupesh Kumar Singh',
-    details: 'Solution Architect, Worldline Global Services ',
-    subDetails: '20+ Years Experience',
-    quote: '"Dande Sir’s guidance gave me a clear path, strong confidence, and the motivation to move into AI/ML roles."',
-    role: '',
-    company: '',
-    salary: ''
+    name: 'Rajkeshwar Prasad',
+    details: 'Tech Lead ',
+    subDetails: 'HCL Tech, Germany',
+    quote: '"Dande Sir has a unique way of simplifying complex topics. Concepts that initially seemed difficult, especially in Machine Learning and Deep Learning, became much easier to understand through the structured explanations and practical examples. The program helped me connect AI concepts with real-world engineering problems and gave me confidence to explore AI/ML in my career."',
+    
   },
   {
-    initials: '',
-    name: '',
-    details: '',
-    subDetails: '',
-    quote: '""',
-    role: '',
-    company: '',
-    salary: ''
+    image: "/testimonials/Anek Kumar Singh.jpg",
+    name: 'Anek Kumar Singh',
+    details: 'Software Development Engineer III',
+    subDetails: 'JPMorgan Chase, Bangalore',
+    quote: '"This course gave me a clear and structured roadmap for transitioning into AI/ML. Dande Sir explains every concept with exceptional clarity and patience, making even complex topics easy to understand. The combination of practical projects, real-world examples, and mentorship gave me the confidence to seriously pursue opportunities in AI and Machine Learning."',
+    
   },
   {
-    initials: '',
-    name: '',
-    details: '',
-    subDetails: '',
-    quote: '""',
-    role: '',
-    company: '',
-    salary: ''
+    image: "/testimonials/Sasi Kumar.jpg",
+    name: 'Sasi Kumar',
+    details: 'Principal Engineer',
+    subDetails: 'Akshaya Inc, USA',
+    quote: '"The biggest value for me was the clarity and structure of the program. Instead of jumping between random tutorials and resources, I had a clear roadmap to follow along with continuous mentor support. The curriculum helped me understand not just the concepts, but also how AI/ML is applied in real-world scenarios. It saved me months of confusion and self-study."',
+    
   },
   {
-    initials: '',
-    name: '',
-    details: '',
-    subDetails: '',
-    quote: '""',
-    role: '',
-    company: '',
-    salary: ''
+    image: "/testimonials/Rupesh Kumar Singh.jpg",
+    name: 'Rupesh Kumar',
+    details: 'Solution Architect',
+    subDetails: 'Worldline Global Services, Bangalore',
+    quote: '"What I liked most was the practical approach of the program. The assignments, mini projects, and capstone project helped me move beyond theory and apply AI/ML concepts to real-world problems. By the end of the program, I had gained the confidence to evaluate, build, and discuss AI solutions from an architectural perspective."',
+    
   },
   {
-    initials: '',
-    name: '',
-    details: '',
-    subDetails: '',
-    quote: '""',
-    role: '',
-    company: '',
-    salary: ''
+    image: "/testimonials/Navneeth Ranjan.jpg",
+    name: 'Navneeth Ranjan',
+    details: 'Assistant Vice President',
+    subDetails: 'Citi Corp, Bangalore',
+    quote: '"Before joining the program, AI/ML felt overwhelming because there was so much information scattered across different platforms. What helped me most was the structured learning path, hands-on projects, and continuous mentor support. The program gave me clarity on what to learn, confidence in applying AI/ML concepts, and a practical understanding of how these technologies are used in real-world business environments."',
+    
+  },
+  {
+    image: "/testimonials/Ravi Ranjan Singh.jpg",
+    name: 'Ravi Ranjan Singh',
+    details: 'Technical Manager',
+    subDetails: 'WeSure Global Tech',
+    quote: '"This course gave me a complete roadmap for transitioning into AI/ML. What stood out most was the way complex concepts were explained with clarity and connected to practical, real-world use cases. The structured curriculum, hands-on projects, and implementation-focused approach helped me build a strong foundation and gave me the confidence to move forward in my AI/ML journey."',
+    
+  },
+  {
+    image: "/testimonials/Uma Mahesh.jpg",
+    name: 'Uma Mahesh',
+    details: 'Lead Engineer',
+    subDetails: 'Societe Generale',
+    quote: '"Dande Sir’s teaching gave me a level of clarity that I had not found elsewhere. The program strengthened my fundamentals, filled important knowledge gaps, and helped me understand how AI/ML concepts are applied in real-world scenarios. The hands-on projects and structured roadmap gave me a clear direction and the confidence to actively pursue my transition into AI/ML."',
+    
+  },
+  {
+    image: "/testimonials/Yashwant Kumar.jpg",
+    name: 'Yashwant Kumar',
+    details: 'Associate Architect',
+    subDetails: 'Virtusa, Bangalore',
+    quote: '"One of the things I appreciated most about the program was the way complex concepts were broken down into simple, practical lessons. Topics such as Statistics, EDA, and Machine Learning were explained step-by-step with real-world examples and case studies. The structured approach made it easier to understand not just the theory, but also how to apply these concepts in real business scenarios."',
+    
+  },
+  {
+    image: "/testimonials/Sowjanya.jpg",
+    name: 'Sowjanya VR',
+    details: 'Technical Lead',
+    subDetails: 'Wipro, Bangalore',
+    quote: '"Before joining the program, AI/ML seemed like a complex and overwhelming field. What made the difference was the way concepts were explained through practical examples, hands-on coding sessions, and real-time problem-solving. The structured approach helped me build confidence step by step, and today I feel much more prepared to begin my transition into AI/ML."',
+    
+  },
+  {
+    image: "/testimonials/Deepak.jpg",
+    name: 'Deepak Kumar Singh',
+    details: 'Engineering Manager',
+    subDetails: 'Vodafone (VOIS)',
+    quote: '"Thanks to Dande Sir, I finally understand how AI/ML works in real applications, not just in theory. The practical project-based approach, clear explanations, and structured learning path helped me connect AI concepts with real-world business and engineering problems. It gave me a much clearer understanding of the complete AI/ML workflow."',
+    
+  },
+  {
+    image: "/testimonials/Rupesh Bima.jpg",
+    name: 'Rupesh Bhima',
+    details: 'Project Lead',
+    subDetails: 'TCS, USA',
+    quote: '"Dande Sir has a unique ability to connect theory with real-world application. The program strengthened my understanding of Statistics, Machine Learning, and the practical aspects of building AI solutions. The hands-on projects and clear teaching methodology helped me move beyond concepts and gain confidence in applying them to real business problems."',
+    
+  },
+  {
+    image: "/testimonials/Lakshmi kanth.jpg",
+    name: 'Lakshmi Kanth',
+    details: 'Solution Architect',
+    subDetails: 'Deloitte, Bangalore',
+    quote: '"After many years in the industry, I was looking for a program that focused on true understanding rather than just covering tools and concepts. What stood out to me was the depth of explanation, the industry-focused curriculum, and the continuous mentorship throughout the journey. The program gave me a much clearer perspective on how AI can be applied to solve real business and technology problems."',
+    
   }
   
 ];
@@ -81,13 +127,14 @@ export default function StudentOutcomesSection() {
               Student Outcomes
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-2">
-              No prior work experience. No IIT.
+              Experienced Professionals.
             </h2>
             <h2 className="text-3xl md:text-4xl font-bold text-[#DC2626] mb-6">
-              Real Career Outcomes.
+              Real AI/ML Transitions.
             </h2>
             <p className="text-[#6B7280] text-base leading-relaxed mb-12">
-              Every student featured here started with the same challenge — no industry experience, no AI/ML background, and no special advantage.
+              Every professional featured here started from the same place — years of experience in software, engineering, architecture, or management, but little or no practical AI/ML experience.
+
             </p>
 
             {/* Stats Cards */}
@@ -150,14 +197,7 @@ export default function StudentOutcomesSection() {
                 {current.quote}
               </p>
 
-              {/* Job Card */}
-              <div className="bg-[#F9FAFB] rounded-lg p-4 border-l-4 border-[#10B981] flex justify-between items-center">
-                <div>
-                  <h4 className="text-[#1a1a1a] font-bold text-sm">{current.role}</h4>
-                  <p className="text-[#10B981] text-sm">{current.company}</p>
-                </div>
-                <div className="text-[#10B981] font-bold text-xl">{current.salary}</div>
-              </div>
+              
             </div>
 
             {/* Navigation Arrows */}

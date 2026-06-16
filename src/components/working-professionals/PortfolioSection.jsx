@@ -4,57 +4,57 @@ export default function PortfolioSection() {
       badge: 'Project 01',
       badgeClass: 'bg-[#E0E7FF] text-[#4F46E5]',
       title: 'Customer Churn Predictor',
-      description: 'Build an end-to-end machine learning pipeline to identify customers likely to leave. Covers data cleaning, feature engineering, model training, hyperparameter tuning, and deployment through a REST API.',
-      tags: ['Python', 'Scikit-learn', 'Flask', 'XGBoost', 'Pandas'],
-      companies: ['Mu Sigma', 'Airtel AI', 'Jio Platforms'],
+      description: 'Build an end-to-end ML pipeline to identify customers likely to leave. Covers data cleaning, feature engineering, model training, hyperparameter tuning, model evaluation, and REST API deployment.',
+      tags: ['Python', 'Pandas', 'Scikit-learn', 'XGBoost', 'Hyperparameter Tuning', 'Flask API'],
+      companies: ['Telecom', 'SaaS', 'Banking', 'E-Commerce'],
       isCapstone: false
     },
     {
       badge: 'Project 02',
       badgeClass: 'bg-[#EEDCF8] text-[#8B5CF6]',
       title: 'AI Resume Screening System',
-      description: 'Build an intelligent resume screening application that automatically analyzes, classifies, and ranks candidate resumes against job requirements using NLP and Machine Learning techniques.',
-      tags: ['Python', 'NLP','TensorFlow', 'BERT', 'FastAPI'],
-      companies: ['LinkedIn', 'Naukri', 'Indeed'],
+      description: 'Build an intelligent resume screening application that analyzes resumes, matches them with job descriptions, and ranks candidates using NLP and Machine Learning techniques.',
+      tags: ['Python', 'NLP', 'BERT', 'TensorFlow', 'FastAPI', 'Text Classification', 'Semantic Search'],
+      companies: ['HR Tech', 'Recruitment Platforms', 'Enterprise Hiring'],
       isCapstone: false
     },
     {
       badge: 'Project 03',
       badgeClass: 'bg-[#F5EBDD] text-[#F59E0B]',
       title: 'GenAI Chatbot with RAG',
-      description: 'Build a production-ready AI chatbot capable of answering questions using enterprise knowledge bases through Retrieval-Augmented Generation (RAG) and Large Language Models.',
-      tags: ['Python', 'LLMs', 'LangChain', 'ChromaDB', 'RAG' ],
-      companies: ['OpenAI', 'Microsoft', 'Salesforce'],
+      description: 'Build a production-ready AI chatbot that answers questions from enterprise documents and knowledge bases using Retrieval-Augmented Generation and Large Language Models.',
+      tags: ['Python', 'LLMs', 'LangChain', 'ChromaDB', 'RAG', 'Prompt Engineering', 'FastAPI'],
+      companies: ['Customer Support', 'Internal Knowledge Search', 'EdTech', 'SaaS'],
       isCapstone: false
-    },
+    },   
     {
       badge: 'Project 04',
       badgeClass: 'bg-[#D9EEF8] text-[#0369A1]',
       title: 'Multi-Agent Business Analyst',
       description: 'Build a team of AI agents that collaborate to analyze business data, generate insights, identify trends, and recommend actions for decision-making.',
-      tags: ['LangGraph', 'CrewAI', 'MCP', 'SQL', 'Agentic AI'],
-      companies: ['Amazon', 'Uber', 'Airbnb'],
+      tags: ['Agentic AI', 'CrewAI', 'LangGraph', 'MCP', 'SQL', 'Tool Calling'],
+      companies: ['Business Analytics', 'Operations', 'Sales', 'Strategy Teams'],
       isCapstone: false
     },
     {
       badge: 'Project 05',
       badgeClass: 'bg-[#DCEFE6] text-[#16A34A]',
       title: 'End-to-End MLOps Pipeline',
-      description: 'Automate model training, versioning, deployment, monitoring, and retraining using modern MLOps practices and cloud-native tools.',
-      tags: ['MLflow', 'Airflow', 'AWS', 'Docker', 'GitHub Actions'],
-      companies: ['Netflix', 'Uber', 'Airbnb'],
+      description: 'Automate model training, versioning, deployment, monitoring, and retraining. Learn how production AI systems are managed at scale.',
+      tags: ['MLflow', 'Airflow', 'AWS', 'Docker', 'CI/CD', 'Model Deployment & Monitoring'],
+      companies: ['AI Platforms', 'Data Science Teams', 'ML Engineering Teams'],
       isCapstone: false
     },
     {
       badge: 'Capstone',
       badgeClass: 'bg-[#DDE1F8] text-[#4F46E5]',
-      title: 'Domain Capstone Project',
-      description: 'Build a complete AI application from problem definition to production deployment in your chosen domain. Apply everything learned throughout the program to solve a real-world business problem.',
-      tags: ['Python', 'ML', 'GenAI', 'Cloud', 'Deployment'],
-      companies: ['Healthcare', 'Finance', 'E-Commerce', 'Education', 'Manufacturing'],
+      title: 'Your Domain Capstone Project',
+      description: 'Build a complete AI application from problem definition to deployment in your chosen domain such as Healthcare, Finance, E-Commerce, Education, or Manufacturing.',
+      tags: ['Python', 'ML', 'DL', 'GenAI', 'Agentic AI', 'MLOps', 'Cloud Deployment'],
+      companies: [],
       isCapstone: true,
       domainTag: 'Your choice of domain',
-      footerText: 'This is the project that closes your interviews.'
+      footerText: 'This is the project that helps you connect your past experience with future AI/ML roles.'
     }
   ];
 

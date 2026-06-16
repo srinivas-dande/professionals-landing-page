@@ -1,15 +1,15 @@
 'use client';
 
 const returnItems = [
-  'Complete 24-week AI/ML specialist curriculum, professional track',
-  'Domain-specific capstone project with 1:1 senior mentor guidance',
-  '5 mock technical interviews with written feedback from active ML engineers',
-  'Weekend live sessions - all recordings with lifetime access',
-  '4 × 1:1 mentor sessions (working AI/ML practitioners, not just instructors)',
-  'Salary negotiation coaching specific to AI/ML career switchers',
-  'Resume, LinkedIn, and GitHub portfolio overhaul',
-  'ML system design interview prep, the round that filters senior hires',
-  '6-month post-completion access to placement job channel',
+  '12-Month Structured AI & Machine Learning Career Program',
+  '6 Industry-Ready AI/ML Projects',
+  'Domain-Specific Capstone Project Aligned to Your Experience',
+  '3 Structured Mock Interviews with Detailed Feedback',
+  'AI/ML Interview Preparation & ML System Design',
+  'Resume, LinkedIn & GitHub Portfolio Review',
+  'Career Guidance & Transition Roadmap',
+  '1:1 Mentor Support Throughout the Program',
+  'Exclusive Job & Opportunity Updates',
 ];
 
 export default function ReturnsSection() {
@@ -20,13 +20,13 @@ export default function ReturnsSection() {
         <div className="text-center mb-12">
           <span className="text-[#2563EB] text-base font-bold">The Returns</span>
           <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mt-4 leading-tight">
-            What this <span className="text-[#DC2626]">costs</span>, what it{' '}
-            <span className="text-[#DC2626]">returns</span>, and how fast.
+            The Investment. The <span className="text-[#DC2626]">Skills</span>. The{' '}
+            <span className="text-[#DC2626]">Outcome.</span>
           </h2>
           <p className="text-[#6B7280] mt-4 max-w-xl mx-auto text-sm leading-relaxed">
-            You&apos;ve been in business long enough to evaluate an
+            You've spent years building your career. Before making any investment,
             <br className="hidden md:block" />
-            investment properly. Here is the ROI case made plainly.
+            it's important to understand exactly what you're getting in return.
           </p>
         </div>
 

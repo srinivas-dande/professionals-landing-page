@@ -137,7 +137,7 @@ export default function CurriculumSection() {
           <p className="text-[#667085] text-base max-w-xl mx-auto">
             Every module compounds on the previous one. Beginner-friendly in
             <br className="hidden md:block" />
-            Week 1, deployment-ready by Week 24.
+            Week 1, deployment-ready by Week 48.
           </p>
         </div>
 
