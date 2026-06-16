@@ -4,14 +4,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 export default function TimeCommitmentSection() {
-  const [openItems, setOpenItems] = useState([0]);
+  const [openItem, setOpenItem] = useState(0);
 
   const toggleItem = (index) => {
-    setOpenItems(prev =>
-      prev.includes(index)
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    );
+    setOpenItem(prev => (prev === index ? -1 : index));
   };
 
   const features = [
@@ -112,7 +108,7 @@ export default function TimeCommitmentSection() {
                       {feature.title}
                     </span>
                     <svg
-                      className={`w-5 h-5 text-[#CF2030] transition-transform ${openItems.includes(index) ? 'rotate-180' : ''}`}
+                      className={`w-5 h-5 text-[#CF2030] transition-transform ${openItem === index ? 'rotate-180' : ''}`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -120,7 +116,7 @@ export default function TimeCommitmentSection() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                     </svg>
                   </button>
-                  {openItems.includes(index) && (
+                  {openItem === index && (
                     <div className="px-5 pb-4 pl-[76px]">
                       <p className="text-[#6B7280] text-sm leading-relaxed">
                         {feature.description}
