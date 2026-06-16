@@ -7,7 +7,8 @@ export default function FinalCTASection() {
   const checkItems = [
     '25,000+ Students Trained since 2005',
     '20+ Years Training Experience',
-    'Mock Interviews and Industry Projects',
+    '6 Industry-Ready AI/ML Projects',
+    '3 Structured Mock Interviews',
     'Career Guidance & Placement Assistance',
   ];
 
@@ -187,7 +188,8 @@ export default function FinalCTASection() {
             <div className="bg-[#FEF3C7] rounded-lg px-4 py-3 mb-6 flex items-center gap-2">
               <span className="w-2 h-2 bg-[#F59E0B] rounded-full"></span>
               <span className="text-[#D97706] text-sm font-medium">
-                This course is for professionals with 10+ years of experience. We review every application to confirm the program is right for you before you commit.
+                This program is designed for experienced working professionals.
+                We review every application to understand your background, career goals, and suitability before recommending the next steps.
               </span>
             </div>
 
@@ -283,11 +285,11 @@ export default function FinalCTASection() {
                     className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10"
                   >
                     <option value="">Select Experience</option>
-                    <option value="0-2 Years">0-2 Years</option>
-                    <option value="3-5 Years">3-5 Years</option>
-                    <option value="6-10 Years">6-10 Years</option>
-                    <option value="10-15 Years">10-15 Years</option>
-                    <option value="15+ Years">15+ Years</option>
+                    <option value="3 to 6 Years">3 to 6 Years</option>
+                    <option value="6 to 10 Years">6 to 10 Years</option>
+                    <option value="10 to 15 years">10 to 15 years</option>
+                    <option value="15 to 20 Years">15 to 20 Years</option>
+                    <option value="20+ Years">20+ Years</option>
                   </select>
                   {errors.year_of_experience && (
                     <p className="text-red-500 text-xs mt-1">
@@ -318,9 +320,14 @@ export default function FinalCTASection() {
                     <option value="Software Engineer">Software Engineer</option>
                     <option value="Senior Software Engineer">Senior Software Engineer</option>
                     <option value="Tech Lead">Tech Lead</option>
-                    <option value="Engineering Manager">Engineering Manager</option>
                     <option value="Project Manager">Project Manager</option>
-                    <option value="Business Analyst">Business Analyst</option>
+                    <option value="Engineering Manager">Engineering Manager</option>
+                    <option value="Product Manager">Product Manager</option>
+                    <option value="Architect">Architect</option>
+                    <option value="Solution Architect">Solution Architect</option>
+                    <option value="Data Engineer">Data Engineer</option>
+                    <option value="DevOps Engineer">DevOps Engineer</option>
+                    <option value="QA / Test Engineer">QA / Test Engineer</option>
                     <option value="Other">Other</option>
                   </select>
                   {errors.current_role && (
@@ -347,7 +354,7 @@ export default function FinalCTASection() {
               disabled={loading}
               className="w-full bg-[#CF2030] hover:bg-[#b01c2a] text-white font-semibold py-3 px-6 rounded-sm flex items-center justify-center gap-2 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {loading ? "Submitting..." : "Reserve My Seat in the June Batch"}
+              {loading ? "Submitting..." : "Get Program Details"}
 
               {!loading && (
                 <svg

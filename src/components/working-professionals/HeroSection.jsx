@@ -7,8 +7,10 @@ export default function HeroSection() {
   const checkItems = [
     '25,000+ Students Trained since 2005',
     '20+ Years Training Experience',
-    'Mock Interviews and Industry Projects',
+    '6 Industry-Ready AI/ML Projects',
+    '3 Structured Mock Interviews',
     'Career Guidance & Placement Assistance',
+    
   ];
 
   const [formData, setFormData] = useState({
@@ -150,21 +152,29 @@ export default function HeroSection() {
           <div className="inline-flex items-center gap-2 bg-[#D8EAE2] rounded-full px-3 py-2 mb-6 w-full md:w-auto">
             <span className="w-2 h-2 bg-[#08A85B] rounded-full"></span>
             <span className="text-[#08A85B] text-[11px] md:text-sm font-bold">
-              AI/ML Career Transition · For Working Professionals
+              AI & Machine Learning Career Program · For Working Professionals
             </span>
           </div>
 
           {/* Heading */}
           <h1 className="max-w-[900px] text-[30px] md:text-[58px] lg:text-[62px] font-medium leading-[1.05] tracking-[-0.02em] mb-5">
-            <span className="text-[#CF2030] font-semibold">Upskill With AI</span>
+            <span className="text-[#CF2030] font-semibold">Upskill</span>
             <span className="text-[#0B132B]">
-              {" "}While You Work. Unlock Higher-Paying Opportunities.
-            </span>
+              {" "}with AI & Machine Learning While You Work.
+
+              <span className="block text-[24px] md:text-[40px] lg:text-[44px] text-[#0B132B] mt-2">
+                Unlock Higher-Paying Opportunities.
+              </span>
+
+            </span >
+      
           </h1>
+          
 
           {/* Description */}
           <p className="text-[#475467] text-[15px] md:text-[15px] leading-7 md:leading-relaxed mb-8 max-w-[600px]">
-            This isn't another AI course. It's an artificial intelligence course for working professionals which helps you build on your existing experience, develop in-demand AI skills, and transition into high-growth AI/ML roles with significantly higher earning potential.
+            This isn’t just another AI course. It’s a structured Artificial Intelligence and Machine Learning program designed for working professionals who want to build on their existing experience, develop in-demand AI/ML skills, and transition into high-growth roles with greater career opportunities and higher earning potential.
+
           </p>
 
           {/* Checklist */}
@@ -197,7 +207,8 @@ export default function HeroSection() {
           <div className="bg-[#F5F1E6] border border-[#E9D2A8] rounded-md px-3 py-1 mb-6 flex items-center gap-3">
             <span className="w-2.5 h-2.5 bg-[#F28C28] rounded-full"></span>
             <span className="text-[#F28C28] text-[13px] font-semibold">
-              This course is for professionals with 10+ years of experience. We review every application to confirm the program is right for you before you commit.
+              This program is designed for experienced working professionals.
+We review every application to understand your background, career goals, and suitability before recommending the next steps.
             </span>
           </div>
 
@@ -293,11 +304,11 @@ export default function HeroSection() {
                     className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10"
                   >
                     <option value="">Select Experience</option>
-                    <option value="0-2 Years">0-2 Years</option>
-                    <option value="3-5 Years">3-5 Years</option>
-                    <option value="6-10 Years">6-10 Years</option>
-                    <option value="10-15 Years">10-15 Years</option>
-                    <option value="15+ Years">15+ Years</option>
+                    <option value="3 to 6 Years">3 to 6 Years</option>
+                    <option value="6 to 10 Years">6 to 10 Years</option>
+                    <option value="10 to 15 years">10 to 15 years</option>
+                    <option value="15 to 20 Years">15 to 20 Years</option>
+                    <option value="20+ Years">20+ Years</option>
                   </select>
                   {errors.year_of_experience && (
                     <p className="text-red-500 text-xs mt-1">
@@ -328,9 +339,14 @@ export default function HeroSection() {
                     <option value="Software Engineer">Software Engineer</option>
                     <option value="Senior Software Engineer">Senior Software Engineer</option>
                     <option value="Tech Lead">Tech Lead</option>
-                    <option value="Engineering Manager">Engineering Manager</option>
                     <option value="Project Manager">Project Manager</option>
-                    <option value="Business Analyst">Business Analyst</option>
+                    <option value="Engineering Manager">Engineering Manager</option>
+                    <option value="Product Manager">Product Manager</option>
+                    <option value="Architect">Architect</option>
+                    <option value="Solution Architect">Solution Architect</option>
+                    <option value="Data Engineer">Data Engineer</option>
+                    <option value="DevOps Engineer">DevOps Engineer</option>
+                    <option value="QA / Test Engineer">QA / Test Engineer</option>
                     <option value="Other">Other</option>
                   </select>
                   {errors.current_role && (
@@ -357,7 +373,7 @@ export default function HeroSection() {
               disabled={loading}
               className="w-full bg-[#CF2030] hover:bg-[#b01c2a] text-white font-semibold py-3 px-6 rounded-sm flex items-center justify-center gap-2 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {loading ? "Submitting..." : "Reserve My Seat in the June Batch"}
+              {loading ? "Submitting..." : "Get Program Details"}
 
               {!loading && (
                 <svg
