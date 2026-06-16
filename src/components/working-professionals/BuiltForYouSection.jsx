@@ -187,7 +187,7 @@ export default function BuiltForYouSection() {
                 margin: '0 0 12px 0',
               }}
             >
-              Domains We&apos;ve Placed From
+              AI/ML Roles This Program Prepares You For
             </h3>
             <p
               style={{
@@ -198,7 +198,7 @@ export default function BuiltForYouSection() {
                 margin: '0 0 24px 0',
               }}
             >
-              These are the professional backgrounds our placed switchers came from. Each domain brings context that accelerates AI learning not slows it.
+              Build the skills, projects, and portfolio required for a wide range of AI and Machine Learning opportunities.
             </p>
 
             <div

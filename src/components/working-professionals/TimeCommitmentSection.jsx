@@ -148,7 +148,7 @@ export default function TimeCommitmentSection() {
             </div>
 
             <p className="mt-8 text-sm text-[#6B7280] leading-relaxed">
-              <span className="font-bold text-[#111827]">Total: ~16 hrs/week.</span> Every student from our 2024 cohort completed this alongside a full college schedule, including students who were sitting for end-semester exams mid-course.
+              <span className="font-bold text-[#111827]">Total Commitment: ~16 Hours Per Week.</span><br/>This schedule is specifically designed for college students and working professionals, allowing you to build AI/ML skills without disrupting your academics or work commitments.
             </p>
           </div>
         </div>
