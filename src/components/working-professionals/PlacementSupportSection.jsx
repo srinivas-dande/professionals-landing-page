@@ -1,9 +1,11 @@
 export default function PlacementSupportSection() {
   const checklistItems = [
-    'Domain knowledge is the moat fresh graduates dont have',
-    'AI/ML hiring managers actively seek career switchers at senior level',
-    'Your technical foundation means you go faster, not slower',
-    'Experience commands better AI/ML compensation than a fresher',
+    'Domain knowledge that fresh graduates simply dont have',
+    'Strong technical and engineering foundations that accelerate learning',
+    'Real-world problem-solving experience that AI teams value',
+    'Better understanding of products, customers, systems, and business requirements',
+    'The ability to apply AI/ML to real business problems, not just build models',
+    'Professional maturity, communication skills, and stakeholder management experience',
     
   ];
 
@@ -19,11 +21,11 @@ export default function PlacementSupportSection() {
             </span>
 
             <h2 className="text-2xl md:text-3xl lg:text-[28px] font-bold text-[#111827] mt-4 leading-tight">
-              Why 10 years of experience makes you a better AI/ML candidate not a worse one
+              Why Your Experience Can Be Your Biggest AI/ML Asset
             </h2>
 
             <p className="text-[#6B7280] text-base md:text-sm mt-6 leading-relaxed">
-              The market narrative says young is better in tech. The actual hiring data for AI/ML roles says something different.
+              Many professionals assume they are starting late. In reality, years of experience can become a powerful advantage when combined with practical AI/ML skills.
             </p>
 
             {/* Checklist */}

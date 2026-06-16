@@ -2,21 +2,23 @@
 
 export default function SelfCheckSection() {
   const rightPlaceItems = [
-    { bold: "You have 10+ years in engineering, IT, software, or tech-adjacent roles", text: "and feel you've hit a ceiling, in salary, growth, or the quality of problems you're solving" },
-    { bold: "You've watched colleagues move into AI/ML roles", text: "and come back with better packages, more interesting work, and designations that carry more weight and you want that" },
-    { bold: "You're strategic, not desperate,", text: "you're not switching because you're in trouble; you're switching because you can see where the industry is going and you want to move with it" },
-    { bold: "You have technical foundations", text: "coding, systems thinking, data intuition but haven't yet applied them to AI/ML specifically" },
-    { bold: "Time is your scarcest resource", text: "you have a job, possibly a family, real commitments. You need this to fit efficiently around your life, not replace it" },
-    { bold: "You've already graduated", text: "and are skeptical which is exactly why you're still reading this. You want evidence before you commit, not a sales pitch" },
-    { bold: "You've been burned by shallow online courses", text: "and are skeptical which is exactly why you're still reading this. You want evidence before you commit, not a sales pitch" },
+    { bold: "You have 5+ years of experience in software, engineering, IT, or technology-related roles ", text: "and feel you've reached a plateau in growth, compensation, or the complexity of problems you're solving." },
+    { bold: "You've watched AI reshape ", text: "the industry and want to stay ahead rather than react after the shift has already happened." },
+    { bold: "You're not looking for a quick fix. ", text: "You're making a deliberate career investment because you can see where technology is heading." },
+    { bold: "You already have strong professional ", text: "foundations—coding, systems thinking, architecture, problem-solving, or domain expertise—but haven't applied them to AI/ML yet." },
+    { bold: "Time is your most limited resource. ", text: "You have a career, responsibilities, and commitments, so learning must fit around your life rather than disrupt it." },
+    { bold: "You're looking for a structured roadmap ", text: "instead of spending months jumping between YouTube videos, online courses, and disconnected resources." },
+    { bold: "You value practical skills ", text: "over certificates and would rather build real projects than simply complete another course." },
+    { bold: "You're willing to invest consistently ", text: "over the next 12 months to build meaningful AI/ML capability." },
   ];
 
   const notForYouItems = [
-    { bold: "You have fewer than 5 years of professional experience", text: "we have a separate programme built for students and early-career professionals. This one is built differently" },
-    { bold: "You're looking for a guaranteed job", text: "we don't promise one, and no credible programme does. We give you the best possible shot; the outcome requires your effort too" },
-    { bold: "You can't commit 10–12 hours per week", text: "if the next 6 months are genuinely maxed out, wait for the right time. Starting and dropping is worse than starting later" },
-    { bold: "You're looking for a passive learning experience", text: "this involves live sessions, real projects, peer reviews, and mentor accountability. Passive viewers don't get placed" },
-    { bold: "You're looking for a passive learning experience", text: "this involves live sessions, real projects, peer reviews, and mentor accountability. Passive viewers don't get placed" },
+    { bold: "You're looking for a quick AI certification ", text: "rather than building real AI/ML skills." },
+    { bold: "You're looking for a guaranteed job. ", text: "We don't promise one, and no credible program does. We give you the best possible foundation, guidance, and support, but the outcome still depends on your effort and consistency." },
+    { bold: "You can't commit around 16 hours per week. ", text: "If the next 12 months are genuinely maxed out, it's better to start later than start and drop midway." },
+    { bold: "You're looking for a passive learning experience. ", text: "This program involves live classes, projects, assignments, mock interviews, and continuous practice." },
+    { bold: "You're unwilling to build projects. ", text: "Real AI/ML skills are developed through hands-on implementation, not just watching videos." },
+    { bold: "You're not ready to invest in long-term career growth. ", text: "This program is designed for professionals who are thinking years ahead, not just months ahead." },
   ];
 
   return (
@@ -29,8 +31,8 @@ export default function SelfCheckSection() {
             Is this <span className="text-[#DC2626]">programme</span> right for you?
           </h2>
           <p className="text-[#6B7280] mt-4 max-w-2xl mx-auto">
-            "This isn't for everyone"  and saying so helps the 
-               <br/>right people find us faster.
+            "This program is not for everyone. It's designed for professionals who are serious about building AI/ML expertise and willing to invest time consistently over the next 12 months.
+               <br/>
           </p>
         </div>
 
@@ -46,7 +48,7 @@ export default function SelfCheckSection() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-[#111827]">This was built for you if...</h3>
-                <p className="text-[#9CA3AF] text-sm mt-1">You'll recognise yourself in at least 4 of these</p>
+                <p className="text-[#9CA3AF] text-sm mt-1">You'll probably recognise yourself in at least four of these:</p>
               </div>
             </div>
 

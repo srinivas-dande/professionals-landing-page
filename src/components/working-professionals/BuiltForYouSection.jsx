@@ -1,42 +1,68 @@
 'use client';
 
 const checklistItems = [
-  'You have technical foundations',
-  'You know the industry, not just the algorithm',
-  'You need a transition in months, not years',
-  'You need it to work around a full-time job',
+  'You already have technical and problem-solving foundations',
+  'You understand business problems, not just algorithms',
+  'You bring domain expertise that AI teams value',
+  'You want a structured transition, not another random online course',
+  'You need learning that fits around a full-time job',
+  'You want to apply AI/ML to real-world industry problems',
 ];
 
 const domains = [
   {
-    label: 'Software Engineering / Backend',
-    badge: 'Largest cohort',
+    label: 'AI Engineer',
+    badge: '(3–8+ Years Experience)',
     badgeBg: '#E0E7FF',
     badgeText: '#4F46E5',
   },
   {
-    label: 'Data Engineering / BI / Analytics',
-    badge: 'Fastest transition',
+    label: 'Machine Learning Engineer',
+    badge: '(3–8+ Years Experience)',
     badgeBg: '#F3E8FF',
     badgeText: '#9333EA',
   },
   {
-    label: 'DevOps / Infrastructure / Cloud',
-    badge: 'MLOps roles',
+    label: 'Generative AI Engineer',
+    badge: '(3–10+ Years Experience)',
     badgeBg: '#FEE2C0',
     badgeText: '#EA580C',
   },
   {
-    label: 'Banking / Finance Technology',
-    badge: 'FinAI roles',
+    label: 'Applied AI Engineer',
+    badge: '(5–12+ Years Experience)',
     badgeBg: '#CFFAFE',
     badgeText: '#0891B2',
   },
   {
-    label: 'Manufacturing / Industrial',
-    badge: 'Industrial AI roles',
-    badgeBg: '#DCFCE7',
-    badgeText: '#16A34A',
+    label: 'MLOps Engineer',
+    badge: '(5–12+ Years Experience)',
+    badgeBg: '#E0E7FF',
+    badgeText: '#4F46E5',
+  },
+  {
+    label: 'AI Technical Lead',
+    badge: '(8–15+ Years Experience)',
+    badgeBg: '#F3E8FF',
+    badgeText: '#9333EA',
+  },
+  {
+    label: 'AI Product Manager',
+    badge: '(10+ Years Experience)',
+    badgeBg: '#FEE2C0',
+    badgeText: '#EA580C',
+  },
+  {
+    label: 'AI Solution Architect',
+    badge: '(10+ Years Experience)',
+    badgeBg: '#CFFAFE',
+    badgeText: '#0891B2',
+  },
+  {
+    label: 'ML Platform Architect',
+    badge: '(10+ Years Experience)',
+    badgeBg: '#E0E7FF',
+    badgeText: '#4F46E5',
   },
 ];
 
@@ -76,8 +102,8 @@ export default function BuiltForYouSection() {
               }}
             >
               This course is not repurposed fresher content. It was{' '}
-              <span style={{ color: '#DC2626' }}>designed from scratch</span> for
-              you.
+              <span style={{ color: '#DC2626' }}>designed for experienced professionals.</span> 
+              
             </h2>
             <p
               style={{
@@ -88,7 +114,7 @@ export default function BuiltForYouSection() {
                 marginBottom: '0',
               }}
             >
-              Most AI/ML courses start at zero. This one starts where you are with years of engineering or domain experience that becomes your unfair advantage inside the programme.
+              Most AI/ML programs start from zero. This one starts with the experience, technical foundations, and industry knowledge you've already spent years building.
             </p>
 
             <ul

@@ -4,25 +4,54 @@ import { useState } from 'react';
 
 const faqs = [
   {
-    question: "Will companies actually hire a 35 year old career switcher into an AIML role?",
-    answer: "Yes, and at higher compensation than freshers. The fear that age counts against you is real, but the data doesn't support it for AI/ML specifically. Companies building AI products need people who can bridge the algorithm and the business problem. That requires years of domain experience. 91% of our professionals who complete this programme transition within 6 months, with an average salary increase of ₹18 LPA over their previous package."
+    question: " Will companies actually hire a 35+ year old professional into AI/ML roles?",
+    answer: `Yes. AI/ML teams need professionals who understand products, systems, customers, and business problems—not just algorithms.
+
+Your experience can become a competitive advantage when combined with practical AI/ML skills. The goal is not to start over, but to build on the career foundation you already have.`
   },
   {
     question: "I've tried online courses before and they haven't led anywhere. Why is this different?",
-    answer: "The difference is accountability and outcome infrastructure, not content quality. Self-paced courses give you knowledge. This programme gives you a portfolio, 5 mock interviews with real feedback, direct referrals to hiring companies, and a placement team tracking your progress. The curriculum is also built around your existing experience, which means you're not starting from zero and the learning is immediately applicable. The 91% transition rate is the honest answer to \"why is this different.\""
+    answer: `Most professionals don't struggle because information is unavailable. They struggle because they don't know what to learn, what to build, and how to connect everything into practical skills.
+
+    This program combines a structured roadmap, hands-on projects, mentor support, mock interviews, and career guidance. 
+
+    That's the difference between consuming content and building capability.`
   },
   {
     question: 'How do I know this will work around my job schedule and commitments?',
-    answer: "Live sessions are weekends only, Saturday 3 hours, Sunday 2.5 hours. All recordings are available within 24 hours. Weekday work is 3–4 hours maximum, flexible around your schedule. Project deadlines can flex by up to 2 weeks per module for professionals with demanding roles. 91% of our enrolled professionals complete this without taking leave from their current employer. The remaining 9% typically take a 1–2 week pause during intense work periods and resume, we don't count this as failure."
+    answer: `The program is designed specifically for working professionals. Live classes run from Monday to Thursday, 8:00 PM to 10:00 PM, with recordings available for revision. Most students spend around 12–16 hours per week, including classes, practice, and projects.
+
+    The goal is consistent progress alongside your job, not putting your career on hold.`
   },
   {
     question: "What if I don't have a strong Python or coding background?",
-    answer: "The programme accepts professionals with a technical background, systems thinking, data intuition, engineering logic even if Python is not your current primary language. The first 3 weeks cover Python for ML at an accelerated pace for engineers. If your background is more analytical or managerial (like product management or finance), the capstone and role preparation is adjusted accordingly. We review your profile in the application process specifically to confirm this fit before you enroll."
+    answer: `That's perfectly fine. The program starts with Python and programming fundamentals before moving into Machine Learning and AI concepts.
+
+    We also review every application to ensure the program is a good fit for your background and career goals.`
   },
   {
     question: "My employer might not be comfortable with me upskilling for a different role. Is this discreet?",
-    answer: "Completely. All sessions are private, no public cohort announcements, no LinkedIn tagging unless you specifically request it. The program is designed to be completed independently of your employer's visibility. Many of our enrolled professionals haven't informed their employers, which is entirely standard and respected. You control what you share and when."
-  }
+    answer: `Yes. Your participation in the program is completely private. We do not make public announcements, tag participants on social media, or share any information without your permission.
+
+    Many professionals choose to upskill independently while evaluating future opportunities. What you share with your employer, colleagues, or network is entirely your decision.`
+  },
+  {
+    question: "Do I need a background in Data Science or AI to join?",
+    answer: "No. The program is designed for working professionals from software engineering, testing, data, analytics, architecture, DevOps, and related technical backgrounds. We start with the fundamentals and gradually progress to advanced AI/ML concepts."
+  },
+  {
+    question: "Is this focused on theory or hands-on implementation?",
+    answer: "The program combines concepts with extensive practical work. You'll build projects, work with real datasets, deploy applications, and apply AI/ML techniques to real-world business problems."
+  },
+  {
+    question: "What kind of projects will I build?",
+    answer: "You'll work on industry-relevant projects covering Machine Learning, Generative AI, Agentic AI, and MLOps. The goal is to build a portfolio that demonstrates practical AI/ML skills rather than just theoretical knowledge."
+  },
+  {
+    question: "Will I receive placement assistance?",
+    answer: "Yes. The program includes mock interviews, resume and LinkedIn reviews, portfolio guidance, career mentoring, and job opportunity updates. Our goal is to help you become interview-ready and support your AI/ML transition journey."
+  },
+ 
   
 ];
 
