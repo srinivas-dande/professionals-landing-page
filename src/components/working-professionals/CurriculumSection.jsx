@@ -69,8 +69,8 @@ export default function CurriculumSection() {
   ];
 
   // Layout order as shown in Frame 5: Left column [0, 4], Right column [2, 1, 3, 5]
-  const leftModules = [modules[0], modules[4]];
-  const rightModules = [modules[2], modules[1], modules[3], modules[5]];
+  const leftModules = [modules[0], modules[1]];
+  const rightModules = [modules[2], modules[3], modules[4], modules[5]];
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? -1 : index);
@@ -132,7 +132,7 @@ export default function CurriculumSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-4">
             A complete <span className="text-[#DC2626]">artificial intelligence</span>
             <br />
-            specialist course, 24 weeks
+            specialist course, 48 weeks
           </h2>
           <p className="text-[#667085] text-base max-w-xl mx-auto">
             Every module compounds on the previous one. Beginner-friendly in

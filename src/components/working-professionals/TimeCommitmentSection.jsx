@@ -17,38 +17,44 @@ export default function TimeCommitmentSection() {
   const features = [
   {
     image: '/icons/weekend.png',
-    title: 'Month 1–2, Foundations Accelerated',
+    title: 'Live Classes (Mon–Thu)',
     description:
-      'Python, ML fundamentals, and your first end-to-end project. Fast-tracked for professionals, no repetition of things you already know.'
+      `8:00 P.M. – 10:00 P.M. | 4 Days a Week.
+
+      Live instructor-led classes conducted on weekday evenings. Every session is recorded and shared within 24 hours, so you can revisit concepts or catch up whenever needed.`
   },
   {
     image: '/icons/assignment.png',
-    title: 'Month 3–4, Deep Learning + NLP',
+    title: 'Weekend Practice & Assignments',
     description:
       "Neural networks, transformers, and LLMs with a domain-specific project that goes into your portfolio. This is where most of the learning density lives."
   },
   {
     image: '/icons/project.png',
-    title: 'Month 5, MLOps + Deployment',
+    title: 'Project Work at Your Own Pace',
     description:
-      "Production AI systems, cloud deployment, and monitoring. For engineering professionals, this module accelerates quickly given your existing infrastructure knowledge."
+      `Flexible & Self-Paced
+
+    Build real-world AI/ML projects at your own pace while receiving guidance and feedback from mentors throughout the program.`
   },
   {
     image: '/icons/recording.png',
-    title: 'Month 6, Capstone + Interview Prep',
+    title: 'Lifetime Access to Recordings',
     description:
-      'Domain capstone build with 1:1 mentorship. 5 mock technical interviews. Salary negotiation coaching. Resume and LinkedIn optimisation for AI/ML JDs.'
+      `Learn Anytime, Revisit Anytime
+
+    Get permanent access to all class recordings, Q&A sessions, and learning materials. Review concepts before interviews, projects, or whenever you need a refresher.`
   }
 ];
 
   const schedule = [
-    { day: 'MON', activity: 'Assignment review · 1–1.5 hrs', type: 'assignment' },
-    { day: 'TUE', activity: 'Work day — no course', type: 'free' },
-    { day: 'WED', activity: 'Project work · 1.5 hrs', type: 'assignment' },
-    { day: 'THU', activity: 'Work day — no course', type: 'free' },
-    { day: 'FRI', activity: 'Reading + revision · 1 hr', type: 'project' },
-    { day: 'SAT', activity: 'Live class · 3 hrs', type: 'live' },
-    { day: 'SUN', activity: 'Live class · 2 hrs', type: 'live' }
+    { day: 'MON', activity: 'Live class · 2 hrs', type: 'assignment' },
+    { day: 'TUE', activity: 'Live class · 2 hrs', type: 'assignment' },
+    { day: 'WED', activity: 'Live class · 2 hrs', type: 'assignment' },
+    { day: 'THU', activity: 'Live class · 2 hrs', type: 'assignment' },
+    { day: 'FRI', activity: 'Preparation & Practice · 2 hrs', type: 'live' },
+    { day: 'SAT', activity: 'Preparation & Practice · 3 hrs', type: 'live' },
+    { day: 'SUN', activity: 'Preparation & Practice / Assignment · 3 hrs', type: 'live' }
   ];
 
   const getActivityStyle = (type) => {
@@ -146,7 +152,7 @@ export default function TimeCommitmentSection() {
             </div>
 
             <p className="mt-8 text-sm text-[#6B7280] leading-relaxed">
-              <span className="font-bold text-[#111827]">Total: ~10 hrs/week.</span> Every student from our 2024 cohort completed this alongside a full college schedule, including students who were sitting for end-semester exams mid-course.
+              <span className="font-bold text-[#111827]">Total: ~16 hrs/week.</span> Every student from our 2024 cohort completed this alongside a full college schedule, including students who were sitting for end-semester exams mid-course.
             </p>
           </div>
         </div>
