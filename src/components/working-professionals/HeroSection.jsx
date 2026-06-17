@@ -283,7 +283,7 @@ export default function HeroSection() {
             </div>
 
             {/* Year and Branch Row */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div>
                 <label className="block text-[#344054] text-xs font-semibold mb-2 uppercase tracking-wide">
                   Years of Experience
