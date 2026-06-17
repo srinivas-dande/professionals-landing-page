@@ -50,7 +50,7 @@ export default function HeroSection() {
 
       page_url: window.location.href,
       landing_page: window.location.pathname,
-      form_type: "Professionals Landing Page",
+      form_type: "WP - Landing Page",
     }));
   }, []);
 

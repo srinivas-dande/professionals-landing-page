@@ -12,7 +12,6 @@ import SelfCheckSection from '@/components/working-professionals/SelfCheckSectio
 import FAQSection from '@/components/working-professionals/FAQSection';
 import { InstructorSection } from "@/components/working-professionals/instructor-section";
 import FinalCTASection from '@/components/working-professionals/FinalCTASection';
-import Footer from '@/components/working-professionals/Footer';
 
  
 export default function Page() {
@@ -32,7 +31,7 @@ export default function Page() {
       <FAQSection />
       <InstructorSection />
       <FinalCTASection />
-      <Footer />
+      
     </main>
   );
 }
