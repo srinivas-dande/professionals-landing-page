@@ -53,7 +53,7 @@ export default function PortfolioSection() {
       tags: ['Python', 'ML', 'DL', 'GenAI', 'Agentic AI', 'MLOps', 'Cloud Deployment'],
       companies: [],
       isCapstone: true,
-      domainTag: 'Your choice of domain',
+      
       footerText: 'This is the project that helps you connect your past experience with future AI/ML roles.'
     }
   ];
@@ -116,14 +116,7 @@ export default function PortfolioSection() {
                 </div>
               )}
 
-              {/* Domain Tag for Capstone */}
-              {project.domainTag && (
-                <div className="mb-4">
-                  <span className="bg-[#E0E7FF] text-[#4F46E5] text-sm px-4 py-2 rounded-md font-medium">
-                    {project.domainTag}
-                  </span>
-                </div>
-              )}
+              
 
               {/* Companies */}
               {project.companies.length > 0 && (
