@@ -124,7 +124,7 @@ export default function FinalCTASection() {
 
         setErrors({});
         setSuccessMessage(
-          "Thank you!"
+          "You have successfully registered!"
         );
 
         setTimeout(() => {
