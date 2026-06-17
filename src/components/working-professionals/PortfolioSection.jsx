@@ -121,7 +121,7 @@ export default function PortfolioSection() {
               {/* Companies */}
               {project.companies.length > 0 && (
                 <p className="text-xs text-[#9CA3AF]">
-                  Used by teams at:{' '}
+                  Inspired by real-world Use Cases from:{' '}
                   <span className="text-[#4F46E5] font-medium">
                     {project.companies.join(', ')}
                   </span>

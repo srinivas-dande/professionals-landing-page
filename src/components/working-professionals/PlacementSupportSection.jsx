@@ -78,7 +78,7 @@ export default function PlacementSupportSection() {
           </div>
 
           {/* Right Image — edge to edge, no padding, no rounded corners */}
-          <div className="order-1 lg:order-2 lg:w-[55%] flex justify-center lg:justify-end mb-10 lg:mb-0">
+          <div className="order-1 lg:order-2 lg:w-[70%] flex justify-center lg:justify-end mb-10 lg:mb-0">
             <div className="w-full px-2 sm:px-4 lg:px-2 h-[400px] md:h-[450px] lg:h-[520px]">
               <img
                 src="/images/Experience Advantage.png"
