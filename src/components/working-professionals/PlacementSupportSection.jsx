@@ -6,16 +6,15 @@ export default function PlacementSupportSection() {
     'Better understanding of products, customers, systems, and business requirements',
     'The ability to apply AI/ML to real business problems, not just build models',
     'Professional maturity, communication skills, and stakeholder management experience',
-    
   ];
 
   return (
     <section className="py-16 md:py-24 bg-white overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
-        <div className="flex flex-col-reverse lg:flex-row items-stretch">
+        <div className="flex flex-col-reverse lg:flex-row items-stretch gap-6 lg:gap-0">
 
           {/* Left Content */}
-          <div className="lg:w-1/2 mt-6 lg:mt-0 px-6 md:px-12 lg:px-20 flex flex-col justify-center">
+          <div className="lg:w-1/2 px-6 md:px-12 lg:px-20 flex flex-col justify-center">
             <span className="text-[#4F46E5] text-sm font-semibold">
               The Experience Advantage  
             </span>
@@ -57,33 +56,33 @@ export default function PlacementSupportSection() {
 
             {/* Apply Now Button */}
             <a
-  href="#apply-form"
-  className="mt-8 w-fit bg-[#CF2030] text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-3 hover:bg-[#B91C2C] transition-colors"
->
-  Apply Now
-  <svg
-    className="w-5 h-5"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M17 8l4 4m0 0l-4 4m4-4H3"
-    />
-  </svg>
-</a>
+              href="#apply-form"
+              className="mt-8 w-fit bg-[#CF2030] text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-3 hover:bg-[#B91C2C] transition-colors"
+            >
+              Apply Now
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </a>
           </div>
 
-          {/* Right Image — edge to edge, no padding, no rounded corners */}
-          <div className="order-1 lg:order-2 lg:w-[70%] flex justify-center lg:justify-end mb-10 lg:mb-0">
-            <div className="w-full px-2 sm:px-4 lg:px-2 h-[400px] md:h-[450px] lg:h-[520px]">
+          {/* Right Image — expanded width on all sides */}
+          <div className="order-1 lg:order-2 lg:w-3/5 flex justify-center lg:justify-end -mx-6 md:-mx-12 lg:mx-0">
+            <div className="w-full px-6 md:px-12 lg:px-8 h-[320px] sm:h-[380px] md:h-[450px] lg:h-[520px]">
               <img
                 src="/images/Experience Advantage.png"
                 alt="Students working together on placement preparation"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover rounded-lg"
               />
             </div>
           </div>

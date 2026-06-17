@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    image: "/testimonials/Rajkeshwar Prasad.jpg",
+    image: "/testimonials/Rajkeshwar Prasad1.jpg",
     
     name: 'Rajkeshwar Prasad',
     details: 'Tech Lead ',
@@ -14,7 +14,7 @@ const testimonials = [
     
   },
   {
-    image: "/testimonials/Anek Kumar Singh.jpg",
+    image: "/testimonials/Anek Kumar Singh1.jpg",
     name: 'Anek Kumar Singh',
     details: 'Software Development Engineer III',
     subDetails: 'JPMorgan Chase, Bangalore',
@@ -22,7 +22,7 @@ const testimonials = [
     
   },
   {
-    image: "/testimonials/Sasi Kumar.jpg",
+    image: "/testimonials/Sasi Kumar1.jpg",
     name: 'Sasi Kumar',
     details: 'Principal Engineer',
     subDetails: 'Akshaya Inc, USA',
@@ -30,7 +30,7 @@ const testimonials = [
     
   },
   {
-    image: "/testimonials/Rupesh Kumar Singh.jpg",
+    image: "/testimonials/Rupesh Kumar Singh1.jpg",
     name: 'Rupesh Kumar',
     details: 'Solution Architect',
     subDetails: 'Worldline Global Services, Bangalore',
@@ -38,7 +38,7 @@ const testimonials = [
     
   },
   {
-    image: "/testimonials/Navneeth Ranjan.jpg",
+    image: "/testimonials/Navneeth Ranjan1.jpg",
     name: 'Navneeth Ranjan',
     details: 'Assistant Vice President',
     subDetails: 'Citi Corp, Bangalore',
@@ -46,7 +46,7 @@ const testimonials = [
     
   },
   {
-    image: "/testimonials/Ravi Ranjan Singh.jpg",
+    image: "/testimonials/Ravi Ranjan Singh1.jpg",
     name: 'Ravi Ranjan Singh',
     details: 'Technical Manager',
     subDetails: 'WeSure Global Tech',
@@ -54,7 +54,7 @@ const testimonials = [
     
   },
   {
-    image: "/testimonials/Uma Mahesh.jpg",
+    image: "/testimonials/Uma Mahesh1.jpg",
     name: 'Uma Mahesh',
     details: 'Lead Engineer',
     subDetails: 'Societe Generale',
@@ -62,7 +62,7 @@ const testimonials = [
     
   },
   {
-    image: "/testimonials/Yashwant Kumar.jpg",
+    image: "/testimonials/Yashwant Kumar1.jpg",
     name: 'Yashwant Kumar',
     details: 'Associate Architect',
     subDetails: 'Virtusa, Bangalore',
@@ -70,7 +70,7 @@ const testimonials = [
     
   },
   {
-    image: "/testimonials/Sowjanya.jpg",
+    image: "/testimonials/Sowjanya1.jpg",
     name: 'Sowjanya VR',
     details: 'Technical Lead',
     subDetails: 'Wipro, Bangalore',
@@ -78,7 +78,7 @@ const testimonials = [
     
   },
   {
-    image: "/testimonials/Deepak.jpg",
+    image: "/testimonials/Deepak1.jpg",
     name: 'Deepak Kumar Singh',
     details: 'Engineering Manager',
     subDetails: 'Vodafone (VOIS)',
@@ -86,7 +86,7 @@ const testimonials = [
     
   },
   {
-    image: "/testimonials/Rupesh Bima.jpg",
+    image: "/testimonials/Rupesh Bima1.jpg",
     name: 'Rupesh Bhima',
     details: 'Project Lead',
     subDetails: 'TCS, USA',
@@ -94,7 +94,7 @@ const testimonials = [
     
   },
   {
-    image: "/testimonials/Lakshmi kanth.jpg",
+    image: "/testimonials/Lakshmi kanth1.jpg",
     name: 'Lakshmi Kanth',
     details: 'Solution Architect',
     subDetails: 'Deloitte, Bangalore',
@@ -184,6 +184,9 @@ export default function StudentOutcomesSection() {
                   width={66}
                   height={66}
                   className="rounded-full object-cover border border-gray-200"
+                  priority
+                  loading="eager"
+                  unoptimized={false}
                 />
                 <div>
                   <h3 className="text-[#1a1a1a] font-bold text-lg">{current.name}</h3>
