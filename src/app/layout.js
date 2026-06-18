@@ -1,5 +1,6 @@
 import './globals.css';
 import Script from "next/script";
+import { Inter } from "next/font/google";
 
 
 export const metadata = {
@@ -23,6 +24,10 @@ export const metadata = {
     'machine learning certification professionals 2026',
   ],
 };
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 export default function RootLayout({ children }) {
   return (
