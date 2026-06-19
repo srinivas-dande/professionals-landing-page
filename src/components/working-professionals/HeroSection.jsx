@@ -122,6 +122,7 @@ export default function HeroSection() {
           
         }));
 
+
         setErrors({});
         setSuccessMessage(
           <>
@@ -149,7 +150,7 @@ export default function HeroSection() {
   return (
     <section
       id="apply-form"
-      className="scroll-mt-32 bg-[#F5F7FA] py-12 md:py-16 px-4 md:px-8"
+      className="scroll-mt-32 bg-[#F5F7FA] pt-0 pb-12 md:pb-16 px-4 md:px-8"
     >
       <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
         
