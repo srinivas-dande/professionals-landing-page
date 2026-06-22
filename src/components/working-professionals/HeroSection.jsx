@@ -35,7 +35,7 @@ export default function HeroSection() {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
-
+ 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
 
@@ -51,6 +51,10 @@ export default function HeroSection() {
       page_url: window.location.href,
       landing_page: window.location.pathname,
       form_type: "WP - Landing Page",
+
+      lead_status: "New Lead",
+      lead_source: "Google Leads",
+      lead_sub_source: "WP - Landing Page"
     }));
   }, []);
 
