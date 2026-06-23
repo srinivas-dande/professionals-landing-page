@@ -46,6 +46,10 @@ export async function POST(request) {
           year_of_experience: body.year_of_experience,
           current_role: body.current_role,
 
+          lead_status: body.lead_status,
+          lead_source: body.lead_source,
+          lead_sub_source: body.lead_sub_source,
+
           utm_source: body.utm_source,
           utm_medium: body.utm_medium,
           utm_campaign: body.utm_campaign,
