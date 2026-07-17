@@ -32,7 +32,7 @@ export async function POST(request) {
       },
     });
 
-    // ✅ Pabbly Webhook
+    
     try {
       const webhookRes = await fetch("https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY0MDYzMTA0MzA1MjZkNTUzZCI_3D_pc/IjU3NjcwNTZlMDYzMDA0MzA1MjZjNTUzNjUxMzQi_pc", {
         method: "POST",
@@ -72,8 +72,6 @@ export async function POST(request) {
     } catch (err) {
       console.error("Webhook error (Professionals Google Lead):", err);
     }
-
-    
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
