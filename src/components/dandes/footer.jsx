@@ -1,0 +1,263 @@
+"use client"
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+
+
+const coursesLinks = [
+  { label: "AI/ML Course", href: "https://www.dandesacademy.com/courses/ai-machine-learning-course" },
+  { label: "System Design Course", href: "https://www.dandesacademy.com/courses/system-design-course" },
+  { label: "DSA Course", href: "https://www.dandesacademy.com/courses/dsa-course" },
+]
+
+const resourcesLinks = [
+  { label: "Free Class videos", href: "https://www.dandesacademy.com/free-class-videos" },
+ 
+  { label: "Blogs", href: "https://www.dandesacademy.com/blog" },
+  { label: "Testimonials", href: "https://www.dandesacademy.com/testimonials" },
+  { label: "FAQs", href: "https://www.dandesacademy.com/faqs" },
+]
+ 
+const companyLinks = [
+  { label: "About Us", href: "https://www.dandesacademy.com/about-us" },
+  { label: "Srinivas Dande", href: "https://www.dandesacademy.com/srinivas-dande" },
+  { label: "Contact Us", href: "https://www.dandesacademy.com/contact-us" },
+]
+
+export function Footer() {
+
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubscribe = async () => {
+  setMessage("");
+  setError("");
+
+  if (!email.trim()) {
+    setError("Please enter your email.");
+    return;
+  }
+
+  try {
+    setLoading(true);
+
+    const response = await fetch(
+      "/api/email-subscriptions",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type":
+            "application/json",
+        },
+        body: JSON.stringify({
+          email,
+        }),
+      }
+    );
+
+    const data = await response.json();
+
+    if (data.success) {
+      setMessage(
+        "Thank you for subscribing!"
+      );
+      setEmail("");
+    } else {
+      setError(data.message);
+    }
+  } catch (error) {
+    console.error(error);
+
+    setError(
+      "Something went wrong. Please try again."
+    );
+  } finally {
+    setLoading(false);
+  }
+};
+
+
+  return (
+    <footer className="bg-[#002B41] text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+          {/* Left Column - Logo & Newsletter */}
+          <div className="lg:col-span-2">
+            {/* Logo */}
+            <Link
+  href="/"
+  aria-label="Go to Dandes Academy Home"
+  className="flex items-center mb-6"
+>
+  <Image
+    src="/images/DAFooter.png"
+    alt="Dandes Academy Logo"
+    width={180}
+    height={55}
+    className="h-[55px] w-auto object-contain"
+  />
+</Link>
+            <p className="text-gray-300 mb-6">
+              Stay informed on new courses and industry insights.
+            </p>
+
+            {/* Newsletter Form */}
+            <div className="flex gap-2 mb-4">
+              <input
+                type="email"
+                placeholder="Your email"
+                value={email}
+                onChange={(e) =>
+                  setEmail(e.target.value)
+                }
+                className="flex-1 bg-transparent border border-gray-600 rounded px-4 py-2.5 text-white placeholder:text-gray-400 focus:outline-none focus:border-gray-400"
+              />
+
+              <button
+                onClick={handleSubscribe}
+                disabled={loading}
+                className="bg-[#d12027] text-white px-6 py-2.5 rounded font-medium hover:bg-[#b81c22] transition-colors"
+              >
+                {loading ? "Subscribing..." : "Subscribe"}
+              </button>
+            </div>
+
+            {error && (
+  <p className="text-red-400 text-sm mt-2">
+    {error}
+  </p>
+)}
+
+{message && (
+  <p className="text-green-400 text-sm mt-2">
+    {message}
+  </p>
+)}
+
+            <p className="text-xs text-gray-400 mb-6">
+              By subscribing you agree to our Privacy Policy and consent to receive updates from Dandes Academy
+            </p>
+ 
+            {/* Social Links */}
+            <div className="flex gap-3">
+
+              <a href="https://www.facebook.com/DandesAcademy" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="relative w-6 h-6">
+                <Image
+                  src="/images/dandes/icons/facebook.png" 
+                  alt="Facebook" 
+                  width={20}
+                  height={20}
+                  style={{ width: 20, height: 20, position: "absolute", top: "2.24px", left: "2px" }}
+                />
+              </a>
+
+              <a href="https://www.instagram.com/dandesacademy?igsh=cjRkZWpmbWJubjFl" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="relative w-6 h-6">
+                <Image
+                  src="/images/dandes/icons/instagram.png" 
+                  alt="Instagram" 
+                  width={20}
+                  height={20}
+                  style={{ width: 18, height: 18, position: "absolute", top: "3.24px", left: "3px" }} 
+                />
+              </a>
+
+              <a href="https://x.com/DandesAcademy" target="_blank" rel="noopener noreferrer" aria-label="X" className="relative w-6 h-6">
+                <Image
+                  src="/images/dandes/icons/twitter.png" 
+                  alt="Twitter" 
+                  width={20}
+                  height={20}
+                  style={{ width: 18, height: 16, position: "absolute", top: "4.24px", left: "3px" }} 
+                />
+              </a>
+
+              <a href="https://www.linkedin.com/in/srinivasdande/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="relative w-6 h-6">
+                <Image
+                  src="/images/dandes/icons/linkedin.png" 
+                  alt="LinkedIn" 
+                  width={20}
+                  height={20}
+                  style={{ width: 18, height: 18, position: "absolute", top: "3.24px", left: "3px" }}
+                />
+              </a>
+
+              <a href="https://www.youtube.com/@DandesAcademy" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="relative w-6 h-6">
+                <Image
+                  src="/images/dandes/icons/youtube.png" 
+                  alt="YouTube" 
+                  width={20}
+                  height={20}
+                  style={{ width: 20, height: 14, position: "absolute", top: "5px", left: "2px" }} 
+                />
+              </a>
+
+            </div>
+          </div>
+
+          {/* Courses Column */}
+          <div>
+            <h3 className="font-semibold text-white mb-4">Courses</h3>
+            <ul className="space-y-3">
+              {coursesLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources Column */}
+          <div>
+            <h3 className="font-semibold text-white mb-4">Resources</h3>
+            <ul className="space-y-3">
+              {resourcesLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company Column */}
+          <div>
+            <h3 className="font-semibold text-white mb-4">Company</h3>
+            <ul className="space-y-3">
+              {companyLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-700">
+        <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-400 text-sm">
+            © 2026 Dandes Academy. All rights reserved.
+          </p>
+          <div className="flex gap-6">
+            <a href="https://www.dandesacademy.com/privacy-policy" className="text-gray-400 text-sm hover:text-white transition-colors underline">
+              Privacy policy
+            </a>
+            <a href="https://www.dandesacademy.com/terms-and-conditions" className="text-gray-400 text-sm hover:text-white transition-colors underline">
+              Terms of service
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}

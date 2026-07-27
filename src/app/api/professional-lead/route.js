@@ -111,7 +111,7 @@ export async function POST(request) {
               </tr>
 
               <tr>
-                <td style="padding:8px; font-weight:bold;">Year's of Eperience</td>
+                <td style="padding:8px; font-weight:bold;">Years of Experience</td>
                 <td style="padding:8px;">${body.year_of_experience}</td>
               </tr>
 

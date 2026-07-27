@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { isValidPhoneNumber } from "libphonenumber-js";
 
 const countries = [
@@ -27,6 +28,8 @@ const countries = [
 ];
 
 export default function HeroSection() {
+
+  const router = useRouter();
 
   const checkItems = [
     '25,000+ Students Trained since 2005',
@@ -82,6 +85,7 @@ export default function HeroSection() {
       lead_source: "Google Ads",
       lead_sub_source: "WP - Landing Page"
     }));
+    
   }, []);
 
   const validateForm = () => {
@@ -161,20 +165,10 @@ export default function HeroSection() {
           current_role: "",
           
         }));
-
-
         setErrors({});
-        setSuccessMessage(
-          <>
-            Thank you! We have received your details.
-              <br />
-            Our team will contact you shortly.
-          </>
-        );
 
-        setTimeout(() => {
-          setSuccessMessage("");
-        }, 15000);
+  router.replace("/thank-you");
+  return;
       }
 
       setLoading(false);
@@ -206,13 +200,11 @@ export default function HeroSection() {
 
           {/* Heading */}
           <h1 className="max-w-[900px] text-[20px] md:text-[48px] lg:text-[58px] font-medium leading-[1.05] tracking-[-0.02em] mb-5">
-            <span className="text-[#CF2030] font-semibold">Upskill</span>
+            <span className="text-[#CF2030] font-semibold">Switch To</span>
             <span className="text-[#0B132B]">
-              {" "}with AI & Machine Learning While You Work.
+              {" "}High-Paying AI/ML Roles
 
-              <span className="block text-[24px] md:text-[40px] lg:text-[44px] text-[#0B132B] mt-2">
-                Unlock Higher-Paying Opportunities.
-              </span>
+              
 
             </span >
       
