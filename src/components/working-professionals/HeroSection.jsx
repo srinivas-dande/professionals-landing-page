@@ -360,7 +360,11 @@ export default function HeroSection() {
                         year_of_experience: e.target.value,
                       })
                     }
-                    className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10"
+                    className={`w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10 ${
+  formData.year_of_experience
+    ? "text-[#1A1A1A]"
+    : "text-[#98A2B3]"
+}`}
                   >
                     <option value="">Select Experience</option>
                     <option value="3 to 6 Years">3 to 6 Years</option>
@@ -392,7 +396,11 @@ export default function HeroSection() {
                         current_role: e.target.value,
                       })
                     }
-                    className="w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-[#98A2B3] text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10"
+                    className={`w-full px-4 py-3 border border-[#D0D5DD] rounded-lg text-sm bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-[#CF2030] focus:border-transparent cursor-pointer pr-10 ${
+  formData.current_role
+    ? "text-[#1A1A1A]"
+    : "text-[#98A2B3]"
+}`}
                   > 
                     <option value="">Select Role</option>
                     <option value="Software Engineer">Software Engineer</option>
